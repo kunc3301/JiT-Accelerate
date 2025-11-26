@@ -39,16 +39,16 @@ def get_args_parser():
     parser.add_argument('--t_eps', default=5e-2, type=float)
     parser.add_argument('--seed', default=0, type=int)
     parser.add_argument('--start_epoch', default=0, type=int)
-    parser.add_argument('--num_workers', default=12, type=int)
-    parser.add_argument('--pin_mem', action='store_true')
-    parser.add_argument('--no_pin_mem', action='store_false', dest='pin_mem')
-    parser.set_defaults(pin_mem=True)
 
     # dataset
     parser.add_argument('--in_length', default=6, type=int)
     parser.add_argument('--out_length', default=6, type=int)
     parser.add_argument('--threshold', default=100, type=int)
-
+    parser.add_argument('--num_workers', default=12, type=int)
+    parser.add_argument('--pin_mem', action='store_true')
+    parser.add_argument('--no_pin_mem', action='store_false', dest='pin_mem')
+    parser.set_defaults(pin_mem=True)
+    
     # sampling
     parser.add_argument('--sampling_method', default='heun', type=str)
     parser.add_argument('--num_sampling_steps', default=50, type=int)
