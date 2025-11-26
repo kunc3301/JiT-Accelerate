@@ -60,7 +60,7 @@ def plt_radar(sub, output, date_time=None):
         ['{:.0f}°N'.format(tick) if tick > 0 else '{:.0f}°S'.format(abs(tick)) for tick in ax.get_yticks()],
         fontsize=8)
 
-    ax.xaxis.set_major_formatter(LATITUDE_FORMATTER)
+    ax.xaxis.set_major_formatter(LONGITUDE_FORMATTER)
     ax.yaxis.set_major_formatter(LATITUDE_FORMATTER)
     ax.contourf(lon_grid, lat_grid, output, levels=[x for x in range(0,50)], cmap=cmaps.WhiteBlueGreenYellowRed, extend='both')
     
